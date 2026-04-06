@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCP Pulse — Before &amp; After</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+    padding: 56px 64px 40px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Logo -->
+<svg style="position:absolute;top:48px;right:64px" width="36" height="36" viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#4A6CF7"/><polyline points="6,20 12,20 16,8 22,32 26,20 32,20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+<div style="font-size:36px;font-weight:600;letter-spacing:-0.5px;margin-bottom:64px;line-height:1.15">MCP Server Observability:<br>Before &amp; After</div>
+
+<!-- ═══════════ BEFORE ═══════════ -->
+<div style="font-size:12px;font-weight:500;letter-spacing:2.5px;color:#b0b0b0;margin-bottom:32px">BEFORE</div>
+
+<div style="display:flex;align-items:center">
+  <!-- MCP Host -->
+  <div style="border:1.5px dashed #ccc;border-radius:3px;padding:22px 22px 18px;position:relative;flex-shrink:0">
+    <div style="position:absolute;top:-9px;left:12px;background:#fff;padding:0 5px;font-size:8.5px;font-weight:500;letter-spacing:1.5px;color:#aaa">MCP HOST</div>
+    <div style="border:1px solid #d0d0d0;padding:10px 18px;font-size:12px;color:#888;white-space:nowrap">LLM + MCP Client</div>
+  </div>
+
+  <svg width="100" height="22" viewBox="0 0 100 22" style="flex-shrink:0;margin:0 4px">
+    <line x1="0" y1="7" x2="82" y2="7" stroke="#bbb" stroke-width="1.2"/>
+    <polygon points="82,4 82,10 90,7" fill="#bbb"/>
+    <line x1="90" y1="15" x2="8" y2="15" stroke="#bbb" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <polygon points="8,12 8,18 0,15" fill="#bbb"/>
+  </svg>
+
+  <!-- Server cards horizontal -->
+  <div style="display:flex;align-items:flex-start;gap:0">
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="border:1px solid #d0d0d0;width:150px;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div style="width:4px;height:4px;border-radius:50%;background:#bbb"></div>
+        <div style="font-size:9.5px;font-weight:600;letter-spacing:0.8px;color:#333">MCP SERVER</div>
+      </div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;align-items:center;gap:3px">
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">GET_DATA</span>
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">RUN_QUERY</span>
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">SEND_ALERT</span>
+      </div>
+    </div>
+    <svg width="28" height="2" viewBox="0 0 28 2" style="align-self:center;margin-top:-36px;flex-shrink:0"><line x1="0" y1="1" x2="20" y2="1" stroke="#bbb" stroke-width="1.2"/><polygon points="20,0 20,2 26,1" fill="#bbb"/></svg>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="border:1px solid #d0d0d0;width:150px;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="18" y1="20" x2="18" y2="10"/></svg>
+        <div style="width:4px;height:4px;border-radius:50%;background:#bbb"></div>
+        <div style="font-size:9.5px;font-weight:600;letter-spacing:0.8px;color:#333">MCP SERVER</div>
+      </div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;align-items:center;gap:3px">
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">GET_QUOTE</span>
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">ANALYZE</span>
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">SCREEN_STOCKS</span>
+      </div>
+    </div>
+    <svg width="28" height="2" viewBox="0 0 28 2" style="align-self:center;margin-top:-36px;flex-shrink:0"><line x1="0" y1="1" x2="20" y2="1" stroke="#bbb" stroke-width="1.2"/><polygon points="20,0 20,2 26,1" fill="#bbb"/></svg>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="border:1px solid #d0d0d0;width:150px;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="1.5"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        <div style="width:4px;height:4px;border-radius:50%;background:#bbb"></div>
+        <div style="font-size:9.5px;font-weight:600;letter-spacing:0.8px;color:#333">MCP SERVER</div>
+      </div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;align-items:center;gap:3px">
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">READ_FILE</span>
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">SEARCH</span>
+        <span style="font-size:9px;color:#aaa;letter-spacing:0.3px">WRITE_FILE</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="font-size:11px;color:#bbb;font-style:italic;margin:20px 0 0 200px">No visibility — latency, errors, and usage are invisible</div>
+
+<div style="height:56px"></div>
+
+<!-- ═══════════ AFTER ═══════════ -->
+<div style="font-size:12px;font-weight:500;letter-spacing:2.5px;color:#b0b0b0;margin-bottom:32px">AFTER</div>
+
+<!-- After uses a single SVG for precise control — no overlap -->
+<svg width="900" height="280" viewBox="0 0 900 280" fill="none" font-family="Inter, sans-serif">
+
+  <!-- MCP Host box (matches Before: dashed border, inner box) -->
+  <rect x="0" y="100" width="170" height="64" rx="3" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6,4" fill="none"/>
+  <rect x="8" y="90" width="64" height="14" fill="#fff"/>
+  <text x="12" y="100" font-size="8.5" font-weight="500" letter-spacing="1.5" fill="#aaa">MCP HOST</text>
+  <rect x="14" y="114" width="142" height="36" stroke="#d0d0d0" stroke-width="1" fill="none"/>
+  <text x="85" y="137" font-size="12" fill="#888" text-anchor="middle">LLM + MCP Client</text>
+
+  <!-- Arrow host → pulse -->
+  <line x1="170" y1="128" x2="250" y2="128" stroke="#4A6CF7" stroke-width="1.5"/>
+  <polygon points="250,125 250,131 258,128" fill="#4A6CF7"/>
+  <line x1="250" y1="136" x2="170" y2="136" stroke="#4A6CF7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="170,133 170,139 162,136" fill="#4A6CF7"/>
+  <text x="214" y="118" font-size="8.5" font-weight="500" fill="#4A6CF7" text-anchor="middle">Add one line of code</text>
+
+  <!-- mcp-pulse box -->
+  <rect x="260" y="108" width="120" height="48" rx="4" stroke="#4A6CF7" stroke-width="2" fill="#f7f8ff"/>
+  <text x="320" y="130" font-size="12" font-weight="600" fill="#4A6CF7" text-anchor="middle">mcp-pulse</text>
+  <text x="320" y="146" font-size="9" fill="#8b8fc7" text-anchor="middle">observe(mcp)</text>
+
+  <!-- Arrow pulse → trunk -->
+  <line x1="380" y1="132" x2="430" y2="132" stroke="#4A6CF7" stroke-width="1.5"/>
+
+  <!-- Vertical trunk -->
+  <line x1="430" y1="40" x2="430" y2="240" stroke="#4A6CF7" stroke-width="1.5"/>
+
+  <!-- ── Row 1: TRACK LATENCY (y=40, same card style as Before) ── -->
+  <line x1="430" y1="40" x2="478" y2="40" stroke="#4A6CF7" stroke-width="1.5"/>
+  <polygon points="478,37 478,43 486,40" fill="#4A6CF7"/>
+  <!-- Card box (150x58 matching Before) -->
+  <rect x="488" y="11" width="150" height="58" stroke="#d0d0d0" stroke-width="1" fill="none"/>
+  <!-- Clock icon (8px radius, centered at y=26) -->
+  <circle cx="563" cy="26" r="7" fill="none" stroke="#777" stroke-width="1.5"/>
+  <polyline points="563,22 563,26 566,28" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dot + title (matching Before pattern) -->
+  <circle cx="563" cy="40" r="2" fill="#bbb"/>
+  <text x="563" y="56" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#333" text-anchor="middle">TRACK LATENCY</text>
+  <!-- Sub-tools to the right -->
+  <text x="656" y="28" font-size="9" fill="#aaa" letter-spacing="0.3">DURATION_MS</text>
+  <text x="656" y="42" font-size="9" fill="#aaa" letter-spacing="0.3">P50 / P95</text>
+  <text x="656" y="56" font-size="9" fill="#aaa" letter-spacing="0.3">CALLS PER HOUR</text>
+
+  <!-- ── Row 2: TRACK ERRORS (y=132) ── -->
+  <line x1="430" y1="132" x2="478" y2="132" stroke="#4A6CF7" stroke-width="1.5"/>
+  <polygon points="478,129 478,135 486,132" fill="#4A6CF7"/>
+  <rect x="488" y="103" width="150" height="58" stroke="#d0d0d0" stroke-width="1" fill="none"/>
+  <!-- Alert triangle icon (14px wide, centered at y=118, same visual weight) -->
+  <path d="M556,124 L563,112 L570,124 Z" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="563" y1="115.5" x2="563" y2="119" stroke="#777" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="563" cy="121.5" r="1" fill="#777"/>
+  <circle cx="563" cy="132" r="2" fill="#bbb"/>
+  <text x="563" y="148" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#333" text-anchor="middle">TRACK ERRORS</text>
+  <text x="656" y="120" font-size="9" fill="#aaa" letter-spacing="0.3">SUCCESS / FAILURE</text>
+  <text x="656" y="134" font-size="9" fill="#aaa" letter-spacing="0.3">ERROR_MESSAGE</text>
+  <text x="656" y="148" font-size="9" fill="#aaa" letter-spacing="0.3">ERROR_RATE</text>
+
+  <!-- ── Row 3: TRACK USAGE (y=240) ── -->
+  <line x1="430" y1="240" x2="478" y2="240" stroke="#4A6CF7" stroke-width="1.5"/>
+  <polygon points="478,237 478,243 486,240" fill="#4A6CF7"/>
+  <rect x="488" y="211" width="150" height="58" stroke="#d0d0d0" stroke-width="1" fill="none"/>
+  <!-- Bar chart icon (14px tall, centered at y=226, same visual weight) -->
+  <line x1="555" y1="234" x2="555" y2="228" stroke="#777" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="563" y1="234" x2="563" y2="220" stroke="#777" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="571" y1="234" x2="571" y2="224" stroke="#777" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="563" cy="250" r="2" fill="#bbb"/>
+  <text x="563" y="264" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#333" text-anchor="middle">TRACK USAGE</text>
+  <text x="656" y="228" font-size="9" fill="#aaa" letter-spacing="0.3">CALL_VOLUME</text>
+  <text x="656" y="242" font-size="9" fill="#aaa" letter-spacing="0.3">RESPONSE_SIZE</text>
+  <text x="656" y="256" font-size="9" fill="#aaa" letter-spacing="0.3">PER_TOOL_STATS</text>
+
+</svg>
+
+<!-- Bottom -->
+<div style="display:flex;justify-content:flex-end;margin-top:40px;padding-bottom:20px">
+  <span style="font-size:11px;color:#bbb">pip install mcp-pulse &nbsp;|&nbsp; github.com/slimbiggins007/mcp-pulse</span>
+</div>
+
+</body>
+</html>
