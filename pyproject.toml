@@ -1,0 +1,40 @@
+[project]
+name = "mcp-observe"
+version = "0.1.0"
+description = "Drop-in observability for MCP servers — track tool calls, latency, errors, and usage with one line of code"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Jett Magnuson" }]
+keywords = ["mcp", "observability", "analytics", "monitoring", "ai", "agents", "tools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "mcp[cli]>=1.2.0",
+]
+
+[project.optional-dependencies]
+dashboard = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+]
+
+[project.scripts]
+mcp-observe = "mcp_observe.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+]
