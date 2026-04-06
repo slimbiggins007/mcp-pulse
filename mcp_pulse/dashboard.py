@@ -227,7 +227,7 @@ async function loadCalls() {
   if (!calls.length) { body.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted)">No calls yet</td></tr>'; return; }
   body.innerHTML = calls.map(c => {
     const t = new Date(c.timestamp);
-    const time = t.toLocaleTimeString();
+    const time = t.toLocaleDateString(undefined,{month:'short',day:'numeric'}) + ' ' + t.toLocaleTimeString();
     return `<tr>
       <td class="mono">${time}</td>
       <td class="mono">${c.tool_name}</td>

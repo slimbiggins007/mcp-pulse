@@ -1,6 +1,6 @@
 [project]
 name = "mcp-pulse"
-version = "0.1.0"
+version = "0.1.1"
 description = "Drop-in observability for MCP servers — track tool calls, latency, errors, and usage with one line of code"
 readme = "README.md"
 requires-python = ">=3.10"
