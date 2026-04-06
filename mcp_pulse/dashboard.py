@@ -1,4 +1,4 @@
-"""FastAPI dashboard for mcp-observe."""
+"""FastAPI dashboard for mcp-pulse."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from dataclasses import asdict
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
-from mcp_observe.storage import Storage
+from mcp_pulse.storage import Storage
 
 _storage: Storage | None = None
 
@@ -16,7 +16,7 @@ def create_app(db_path: str | None = None) -> FastAPI:
     global _storage
     _storage = Storage(db_path)
 
-    app = FastAPI(title="mcp-observe")
+    app = FastAPI(title="mcp-pulse")
 
     @app.get("/")
     async def index() -> HTMLResponse:
@@ -51,7 +51,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>mcp-observe</title>
+<title>mcp-pulse</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   :root {
@@ -97,7 +97,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
 <div style="display:flex;justify-content:space-between;align-items:start;">
   <div>
-    <h1>mcp-observe</h1>
+    <h1>mcp-pulse</h1>
     <div class="subtitle">MCP Server Analytics</div>
   </div>
   <button class="refresh-btn" onclick="loadAll()">Refresh</button>

@@ -7,9 +7,9 @@ import sqlite3
 import threading
 from pathlib import Path
 
-from mcp_observe.models import ToolCallEvent, ToolStats, ServerSummary
+from mcp_pulse.models import ToolCallEvent, ToolStats, ServerSummary
 
-DEFAULT_DB_PATH = Path.home() / ".mcp-observe" / "observe.db"
+DEFAULT_DB_PATH = Path.home() / ".mcp-pulse" / "observe.db"
 
 
 class Storage:

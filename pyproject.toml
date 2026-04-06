@@ -1,5 +1,5 @@
 [project]
-name = "mcp-observe"
+name = "mcp-pulse"
 version = "0.1.0"
 description = "Drop-in observability for MCP servers — track tool calls, latency, errors, and usage with one line of code"
 readme = "README.md"
@@ -26,7 +26,7 @@ dashboard = [
 ]
 
 [project.scripts]
-mcp-observe = "mcp_observe.__main__:main"
+mcp-pulse = "mcp_pulse.__main__:main"
 
 [build-system]
 requires = ["hatchling"]

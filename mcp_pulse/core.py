@@ -3,12 +3,12 @@
 Two ways to use:
 
     # Option 1: Drop-in replacement (recommended)
-    from mcp_observe import ObserveMCP
+    from mcp_pulse import ObserveMCP
     mcp = ObserveMCP("my-server")
 
     # Option 2: Wrap an existing server
     from mcp.server.fastmcp import FastMCP
-    from mcp_observe import observe
+    from mcp_pulse import observe
     mcp = FastMCP("my-server")
     observe(mcp)
 """
@@ -23,8 +23,8 @@ from typing import Any, Callable
 
 from mcp.server.fastmcp import FastMCP
 
-from mcp_observe.models import ToolCallEvent
-from mcp_observe.storage import Storage
+from mcp_pulse.models import ToolCallEvent
+from mcp_pulse.storage import Storage
 
 
 class ObserveMCP(FastMCP):
@@ -252,7 +252,7 @@ def _patch_existing_tools(
         return
 
     for name, tool in manager._tools.items():
-        if hasattr(tool, "fn") and not getattr(tool.fn, "_mcp_observed", False):
+        if hasattr(tool, "fn") and not getattr(tool.fn, "_mcp_pulsed", False):
             original_fn = tool.fn
             wrapped = _wrap_function(
                 original_fn,
@@ -260,5 +260,5 @@ def _patch_existing_tools(
                 server_name=server_name,
                 log_params=log_params,
             )
-            wrapped._mcp_observed = True  # type: ignore[attr-defined]
+            wrapped._mcp_pulsed = True  # type: ignore[attr-defined]
             tool.fn = wrapped

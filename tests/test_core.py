@@ -4,7 +4,7 @@ import json
 import tempfile
 from pathlib import Path
 
-from mcp_observe import ObserveMCP, Storage, ToolCallEvent
+from mcp_pulse import ObserveMCP, Storage, ToolCallEvent
 
 
 def test_storage_roundtrip():

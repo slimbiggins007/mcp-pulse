@@ -1,17 +1,17 @@
-# mcp-observe
+# mcp-pulse
 
 Drop-in observability for MCP servers. Track tool calls, latency, errors, and usage with one line of code.
 
 ## Install
 
 ```bash
-pip install mcp-observe
+pip install mcp-pulse
 ```
 
 ## Quick Start
 
 ```python
-from mcp_observe import ObserveMCP
+from mcp_pulse import ObserveMCP
 
 # Replace FastMCP with ObserveMCP — that's it
 mcp = ObserveMCP("my-server")
@@ -29,8 +29,8 @@ Every tool call is now automatically tracked — tool name, duration, success/fa
 ## Dashboard
 
 ```bash
-pip install mcp-observe[dashboard]
-mcp-observe
+pip install mcp-pulse[dashboard]
+mcp-pulse
 ```
 
 Opens a web dashboard at `http://localhost:8020` showing:
@@ -43,7 +43,7 @@ Opens a web dashboard at `http://localhost:8020` showing:
 
 ```python
 from mcp.server.fastmcp import FastMCP
-from mcp_observe import observe
+from mcp_pulse import observe
 
 mcp = FastMCP("my-server")
 
@@ -60,7 +60,7 @@ mcp.run(transport="stdio")
 ```python
 mcp = ObserveMCP(
     "my-server",
-    db_path="/path/to/custom.db",  # default: ~/.mcp-observe/observe.db
+    db_path="/path/to/custom.db",  # default: ~/.mcp-pulse/observe.db
     log_params=True,               # log input parameters (default: False)
 )
 ```
